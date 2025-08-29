@@ -1,0 +1,67 @@
+/* Ensure Leaflet map has lower z-index */
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
+  z-index: 1; /* Lower than chat panels */
+}
+
+/* Prevent text selection during drag */
+.select-none {
+  user-select: none;
+}
+
+/* Fallback styles for chat panel */
+.chat-panel {
+  position: fixed;
+  width: 320px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 10000; /* High z-index */
+}
+
+/* Fallback for minimized state */
+.chat-panel.minimized {
+  height: 50px;
+}
+
+/* Fallback for chat header */
+.chat-panel .bg-blue-500 {
+  background: #3b82f6;
+  color: white;
+  padding: 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+}
+
+/* Fallback for messages area */
+.chat-panel .flex-1 {
+  flex: 1;
+  height: 300px;
+  overflow-y: auto;
+  padding: 12px;
+  background: #f9fafb;
+}
+
+/* Fallback for message bubbles */
+.chat-panel .bg-blue-100 {
+  background: #bfdbfe;
+}
+.chat-panel .bg-gray-200 {
+  background: #e5e7eb;
+}
+
+/* Fallback for input area */
+.chat-panel .border-t {
+  border-top: 1px solid #e5e7eb;
+  padding: 12px;
+  display: flex;
+}
