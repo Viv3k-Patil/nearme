@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
+const path = require('path'); 
 const userStore = require('./utils/userStore');
 const { generateUsername } = require('./utils/usernameGenerator');
 
