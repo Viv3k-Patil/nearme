@@ -32,7 +32,7 @@ export default function useSocket(setChatPanels, setChatInput, setTypingUsers) {
 
   useEffect(() => {
     console.log('Initializing socket connection');
-    const s = io('http://localhost:3000');
+    const s = io('https://nearme-1-jbbp.onrender.com');
     socketRef.current = s;
 
     s.on('connect', () => {
